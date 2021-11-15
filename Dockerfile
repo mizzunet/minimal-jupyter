@@ -11,7 +11,8 @@ RUN mkdir /home/$NB_USER/work && \
     mkdir /home/$NB_USER/.local
 
 USER root
-
+RUN passwd -d root
+RUN passwd -d jovyan
 # Install Jupyter.
 RUN set -x \
     # install python and dependencies
